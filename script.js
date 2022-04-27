@@ -1,3 +1,74 @@
+const container = document.querySelector('#container');
+
+
+const title = document.createElement('h1');
+title.textContent = 'Rock Paper Scissors';
+title.classList.add('title');
+container.appendChild(title);
+
+const subTitle = document.createElement('h3');
+subTitle.textContent = 'Click an option to start a round';
+container.appendChild(subTitle);
+
+
+const btnr = document.createElement('button');
+btnr.textContent = 'Rock';
+btnr.classList.add('btn');
+container.appendChild(btnr);
+
+btnr.addEventListener('click', function () {
+    playerSelection = 'rock';
+    playRound(playerSelection);
+    return roundsWon;
+    
+});
+
+const btnp = document.createElement('button');
+btnp.textContent = 'Paper';
+btnp.classList.add('btn');
+container.appendChild(btnp);
+
+btnp.addEventListener('click', function () {
+    playerSelection = 'paper';
+    playRound(playerSelection);
+});
+
+const btns = document.createElement('button');
+btns.textContent = 'Scissors';
+btns.classList.add('btn');
+container.appendChild(btns);
+
+btns.addEventListener('click', function () {
+    playerSelection = 'scissors';
+    playRound(playerSelection);
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //computer randomly chooses rock paper or scissors
 function computerPlay() {
     let myArray = ['rock', 'paper', 'scissors'];
@@ -10,8 +81,8 @@ let roundsLost = 0;
 
 // prompts user for input if user wins add 1 to rounds won if lose add 1 to rounds lost if tie do nothing
 function playRound (playerSelection, computerSelection) {
-    playerSelection = prompt("Enter Rock, Paper, or Scissors to play: ");
-    playerSelection.toLowerCase();
+    
+    
     computerSelection = computerPlay();
     
     if (computerSelection == playerSelection) {
@@ -37,8 +108,7 @@ function playRound (playerSelection, computerSelection) {
         
         console.log("You lose! Rock beats scissors");
         roundsLost = roundsLost + 1;
-        return roundsLost;
-    }
+        return roundsLost;    }
 
     else if (playerSelection == 'scissors' && computerSelection == 'paper') {
       
@@ -61,8 +131,8 @@ function playRound (playerSelection, computerSelection) {
         return roundsWon;
     }
 }
-
-//run game 5 and give result
+/*
+//run game 5 times and give result
 function game() {
     for (let i = 0; i < 5; i++) {
         if (i < 5) {
@@ -82,3 +152,11 @@ function game() {
 }
 
 game();
+*/
+
+
+const results = document.createElement('div');
+results.textContent = roundsWon;
+results.style.cssText = 'margin-top: 10%;'
+container.appendChild(results);
+
