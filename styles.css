@@ -2,8 +2,66 @@
     text-align: center;
 }
 
+button:hover {
+    border-style: solid;
+    border-width: 5px;
+    border-color: #E27D60;
+}
+
 .btn {
-    margin-left: 10%;
-    margin-right: 10%;
+    height: 150px;
+    width: 150px;
+    margin-right: 5%;
+}
+
+#results {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-top: 5%;
+}
+
+#wins {
+    margin-right: 20px;
+    border-style: solid;
+    padding: 5px;
+}
+
+#losses {
+    border-style: solid;
+    padding: 5px;
+}
+
+#currentRound {
+    text-align: center;
+    margin-top: 5%;
+}
+
+.btnr {
+    background-image: url(img/small-rock.jpg);
+   
+}
+
+.btnp {
+    background-image: url(img/paper-small.jpg)
+}
+
+.btns {
+    background-image: url(img/scissors.jpg);
+}
+
+#message {
+    text-align: center;
+    margin-top: 5%;
+}
+body {
+    background-color: #85dcb8;
+}
+
+h1 {
+    color: #E27D60;
+}
+
+h3 {
+    color: #C38D9E;
 }
